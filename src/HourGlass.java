@@ -19,10 +19,9 @@ public class HourGlass {
 		Random rand = new Random();
 
 		for (int i = 0; i < dim; i++) {
-			// arr.add(e) = rand.nextInt(20) - 9; //-9<=x<=9
 			ArrayList<Integer> arrInner = new ArrayList<>();
 			for (int j = 0; j < dim; j++) {
-				arrInner.add(rand.nextInt(19) - 9);
+				arrInner.add(rand.nextInt(19) - 9);//-9<=x<=9
 			}
 			arr.add(arrInner);
 		}
@@ -54,7 +53,7 @@ public class HourGlass {
 		return sum;
 	}
 
-	 int sumLowerHorizontal(int rCentre, int cCentre) {
+	 private int sumLowerHorizontal(int rCentre, int cCentre) {
 		int sum = 0;
 		ArrayList<Integer> row = arr.get(rCentre + 1);
 		for (int i = cCentre - 1; i <= cCentre + 1; i++) {
@@ -63,7 +62,7 @@ public class HourGlass {
 		return sum;
 	}
 
-	 int centreVal(int rCentre, int cCentre) {
+	 private int centreVal(int rCentre, int cCentre) {
 		ArrayList<Integer> row;
 		row = arr.get(rCentre);
 		return row.get(cCentre);
